@@ -11,7 +11,7 @@
 
 
 
-    <test name="Testing ">
+    <test name="TestingCalculation">
         <classes>
 
             <class name="org.example.TestNgTraining"/>
@@ -19,4 +19,13 @@
         </classes>
     </test>
 
+
+
+    <test name="TestingСCircle">
+        <classes>
+
+            <class name="org.example.App"/>
+
+        </classes>
+    </test>
 </suite>
