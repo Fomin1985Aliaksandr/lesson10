@@ -21,7 +21,7 @@
 
 
 
-    <test name="TestingСCircle">
+    <test name="TestingCircle">
         <classes>
 
             <class name="org.example.App"/>
