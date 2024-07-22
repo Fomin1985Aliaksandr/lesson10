@@ -39,7 +39,7 @@ public class TestBrowser extends BaseTest {
     int a = 5;
     int b = 10;
 
-
+//11
     SoftAssert softAssert = new SoftAssert();
     softAssert.assertEquals(b,10);
     softAssert.assertEquals(a,5);
