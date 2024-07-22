@@ -1,50 +1,42 @@
 package org.example;
 
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import java.io.IOException;
 
+import static org.testng.Assert.fail;
+
+
+@Listeners(MyListner.class)
 public class TestNgTraining extends BaseTest {
 
-    @Test
-     public void TestNgTraining() throws IOException {
-        String propValue = getPropety("user");
-        System.out.println(propValue);
+
+
+    @Test(priority = 1)
+    public void testOne(){
+        System.out.println("Create user");
+ fail();
+
     }
 
 
-
-    String name ="gaz";
-    int gazReadings=20;
-    int gazTariff = 50;
-    int calc = gazReadings*gazTariff;
-    int skidka = 50;
-    int total = calc-skidka;
+    @Test(priority = 2, dependsOnMethods ="testOne" )
+    public void testTwo(){
+        System.out.println("Check user");
 
 
+    }
 
-
-
-
-
-@Test //test1
-public void negativSridka(){
-    Assert.assertNotEquals(skidka,54, "Проверка на отрицательную скидку");
+@Test(priority = 3, dependsOnMethods = "testTwo")
+public void testThree(){
+    System.out.println("Delete user");
 
 }
 
-@Test //test2
-public void negativeCalc(){Assert.assertTrue(calc>0, "проверка на отрицательную сумму ");}
-
-    @Test//test3
-    public void negativeTotal(){Assert.assertFalse(total<0, "проверка на отрицательную оющую сумму");}
-
-    @Test//Test4
-    public void testingName(){
-    Assert.assertEquals(name,"gaz");
 
 
 }
-}
+
 

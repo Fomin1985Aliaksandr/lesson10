@@ -1,71 +1,45 @@
 package org.example;
 
 import org.testng.Assert;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-import java.util.Scanner;
+
+
 public class App {
 
 
+    @DataProvider(name ="equivalentClasses" )
 
-
-    @Test//Test1//
-    public void raduisIsNull(){
-
-        double raduis = 0;
-        Assert.assertTrue(raduis==0, "немо");
-        System.out.println(" неможет быть равен Null ");
-    }
-
-
-    @Test//test2
-
-    public void negativRadius(){
-        double raduis = -3;
-        Assert.assertFalse(raduis<0, "Не может быть отрицательным ");
-
-    }
-
-    @Test//Test3
-    public void positivRadius(){
-        double radius = 5;
-        Assert.assertEquals(radius>0, "positiv");
-    }
-
-    public static void main (String[] args){
+public Object[][] dataProvider() {
 
 
 
-
-        Scanner scanner = new Scanner(System.in);
-        System.out.println(" Для определения длинны окружности задайте радиус ");
-        double radius;
-
-
-
-
-
-
-        radius = scanner.nextInt();
-        double result = 2*Math.PI*radius;
-
-        if(radius==0){
-            System.out.println("Радиус не может быть равен NULL");
-        }
-        else if(radius<0){
-            System.out.println(" Радиус не может быть отрицацельный ");
-        }
-        else{
-            System.out.println("Радус равен " + result );
-        }
-
-
-
-
-
+    return new  Object [][]{{-1, false},{0, true},{1, true},{50, true},{99, true},{100, true},{101, false}};
 
     }
 
 
+    @BeforeMethod
+    public void preStep(){
+        System.out.println("Podgotovka");
 
+
+    }
+
+    @AfterMethod
+    public void afterStep(){
+        System.out.println(" Kill session ");
+    }
+
+
+@Test (dataProvider = "equivalentClasses" )
+    public void testOne(int x, boolean isCorrect ){
+        System.out.println(x);
+        Assert.assertTrue(isCorrect);
 }
+
+
+    }
+
+
+
