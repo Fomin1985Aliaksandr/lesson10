@@ -12,13 +12,13 @@ import org.testng.annotations.Test;
 
 public class TestClass {
 
-     WebDriver driver;
+    WebDriver driver;
     @BeforeMethod
     public void setUp() {
         System.setProperty("webdriver.chrom.driver", "src/main/java/resources/driver/chromedriver.exe");
 
         driver = new ChromeDriver();
-       // driver.manage().window().setSize(new Dimension(100,100));
+        // driver.manage().window().setSize(new Dimension(100,100));
     }
 
     @Test(testName = "registration")
@@ -62,11 +62,9 @@ public class TestClass {
 
 
 
-
-
     @AfterMethod
     public void tearDown(){
-    driver.quit();//
+        // driver.quit();
 
     }
 
@@ -84,4 +82,4 @@ public class TestClass {
 //$x("//input[@id='password']")
 //$x("//input[@type='submit' and @class='btn btn_black']")
 //$x("//form[@class='search']")
-//$x("//a[href='https://vmasshtabe.ru/inzhenernye-sistemy/elektrosnabzenie/gibkij-soedinitel-shinoprovoda-xts-23.html' and class='posts__item post publish post-3595323 type-post status-publish format-standard has-post-thumbnail hentry category-diy tag-konstruktor tag-pauk tag-robot' ]/div[@class='post__item-title']")
+//$x("//form[@class='search']/input[@class='placeholder']")<img width="250" height="250"

@@ -1,5 +1,6 @@
 package org.example.tests;
 
+import org.example.pages.FramesPages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.*;
@@ -11,9 +12,16 @@ import java.util.Properties;
 public class BaseTest {
 
 
-    protected WebDriver driver;
 
-    public BaseTest(WebDriver driver) {
+
+
+    protected WebDriver driver;
+    public BaseTest(WebDriver driver)
+
+
+    {
+
+
     }
 
     @BeforeClass
