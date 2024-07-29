@@ -7,7 +7,7 @@ public class BasePage {
     protected WebDriver driver;
 
     BasePage(WebDriver driver) {
-       this.driver = driver;
+        this.driver = driver;
 
 
     }
