@@ -13,9 +13,9 @@ public class TextInputPage extends BaseTest {
 
     public String setText(String textToType){
 
-       driver.findElement(inputText).sendKeys(textToType);
-       driver.findElement(button).click();
-       return textToType;
+        driver.findElement(inputText).sendKeys(textToType);
+        driver.findElement(button).click();
+        return textToType;
     }
     public String getTextFromButton(){
         return driver.findElement(button).getText();

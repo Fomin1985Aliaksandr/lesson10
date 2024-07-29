@@ -18,7 +18,7 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp()  {
-        System.out.println("src/main/java/resources/driver/chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "src/main/java/resources/chromedriver.exe");
         if (driver==null){
             driver = new ChromeDriver();
         }

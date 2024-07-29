@@ -10,35 +10,35 @@ import java.util.Properties;
 public class HomePage extends BasePage {
 
 
-String linkPattern = "//h3/a[text()='%s']";
+    String linkPattern = "//h3/a[text()='%s']";
 
 
 
 
 
 
-public void getTestDirectory(Links targetLinks ){
+    public void getTestDirectory(Links targetLinks ){
 
-    driver.findElement(By.xpath(String.format(linkPattern,targetLinks.linkValue)));
-}
+        driver.findElement(By.xpath(String.format(linkPattern,targetLinks.linkValue))).click();
+    }
 
-   public HomePage(WebDriver driver){
+    public HomePage(WebDriver driver){
 
         super(driver);
     }
 
-public enum Links{
+    public enum Links{
 
-    TEXT_INPUT("Text Input");
+        TEXT_INPUT("Text Input");
 
-    final String linkValue;
+        final String linkValue;
 
-     Links(String s){
-        linkValue = s;
+        Links(String s){
+            linkValue = s;
+
+        }
 
     }
-
-  }
 
 
 
