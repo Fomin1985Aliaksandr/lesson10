@@ -3,7 +3,7 @@
 <suite name="Suite1" verbose="1">
     <test name="OpenPage">
         <classes>
-            <class name="org.example.TestBrowser"/>
+            <class name="org.example.pages.TextInputPage"/>
 
         </classes>
     </test>
@@ -11,21 +11,7 @@
 
 
 
-    <test name="TestingCalculation">
-        <classes>
-
-            <class name="org.example.TestNgTraining"/>
-
-        </classes>
-    </test>
 
 
 
-    <test name="TestingCircle">
-        <classes>
-
-            <class name="org.example.App"/>
-
-        </classes>
-    </test>
 </suite>

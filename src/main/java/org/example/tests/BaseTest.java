@@ -9,6 +9,11 @@ import org.testng.annotations.*;
 import java.io.InputStream;
 import java.util.Properties;
 
+
+
+
+
+
 public class BaseTest {
 
 
@@ -19,6 +24,8 @@ public class BaseTest {
     public BaseTest(WebDriver driver)
 
 
+
+
     {
 
 
@@ -26,6 +33,11 @@ public class BaseTest {
 
     @BeforeClass
     public void setUp()  {
+
+
+
+
+
         System.setProperty("webdriver.chrome.driver", "src/main/java/resources/chromedriver.exe");
         if (driver==null){
             driver = new ChromeDriver();
